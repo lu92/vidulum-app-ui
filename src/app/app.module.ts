@@ -11,10 +11,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { QuotationPageComponent } from './pages/quotation-page/quotation-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    QuotationPageComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
