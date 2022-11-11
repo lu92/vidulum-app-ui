@@ -13,12 +13,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { QuotationPageComponent } from './pages/quotation-page/quotation-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { TaskInboxComponent } from './widget/task-inbox/task-inbox.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotationPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    TaskInboxComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
