@@ -13,12 +13,21 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { QuotationPageComponent } from './pages/quotation-page/quotation-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { AssetRegistrationComponent } from './forms/asset-registration/asset-registration.component';
+import { FormsModule } from '@angular/forms'
+import { ReactiveFormsModule} from '@angular/forms'
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatChipsModule} from '@angular/material/chips';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotationPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    AssetRegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +38,12 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatChipsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
