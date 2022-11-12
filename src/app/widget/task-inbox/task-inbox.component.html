@@ -68,7 +68,6 @@
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"
-      (click)="selection.toggle(row)" class="inbox-element-row">
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="inbox-element-row">
   </tr>
 </table>
