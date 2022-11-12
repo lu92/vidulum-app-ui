@@ -33,6 +33,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
 ];
 
+  const TASKS: Task[] = [
+    {taskId : "T101", userId : "lu92", name: 'Task1', description: "Hello world", status : "Open", created: new Date(2018, 0O5, 0O5, 17, 23, 42, 11), dueDate: new Date(2018, 0O5, 0O5, 17, 23, 42, 11)},
+    {taskId : "T102", userId : "lu92", name: 'Task2', description: "Hello world", status : "Open", created: new Date(2018, 0O5, 0O5, 17, 23, 42, 11), dueDate: new Date(2018, 0O5, 0O5, 17, 23, 42, 11)},
+    {taskId : "T103", userId : "lu92", name: 'Task3', description: "Hello world", status : "Open", created: new Date(2018, 0O5, 0O5, 17, 23, 42, 11), dueDate: new Date(2018, 0O5, 0O5, 17, 23, 42, 11)}
+  ];
+
 @Component({
   selector: 'task-inbox',
   templateUrl: './task-inbox.component.html',
@@ -42,19 +48,12 @@ export class TaskInboxComponent implements OnInit {
 
   constructor() { }
 
-  tasks: Task[] = [
-    {taskId : "1", userId : "lu92", name: 'Task1', description: "Hello world", status : "Open", created: new Date(), dueDate: new Date()},
-    {taskId : "2", userId : "lu92", name: 'Task2', description: "Hello world", status : "Open", created: new Date(), dueDate: new Date()},
-    {taskId : "3", userId : "lu92", name: 'Task3', description: "Hello world", status : "Open", created: new Date(), dueDate: new Date()}
-  ];
-
-
   ngOnInit(): void {
   }
 
-   displayedColumns: string[] = ['select', 'position', 'name', 'weight', 'symbol'];
-    dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-    selection = new SelectionModel<PeriodicElement>(true, []);
+   displayedColumns: string[] = ['select', 'taskId', 'userId', 'weight', 'symbol', 'created', 'dueDate'];
+    dataSource = new MatTableDataSource<Task>(TASKS);
+    selection = new SelectionModel<Task>(true, []);
 
     /** Whether the number of selected elements matches the total number of rows. */
     isAllSelected() {
@@ -74,11 +73,11 @@ export class TaskInboxComponent implements OnInit {
     }
 
     /** The label for the checkbox on the passed row */
-    checkboxLabel(row?: PeriodicElement): string {
+    checkboxLabel(row?: Task): string {
       if (!row) {
         return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
       }
-      return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
+      return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.taskId}`;
     }
 
 }
