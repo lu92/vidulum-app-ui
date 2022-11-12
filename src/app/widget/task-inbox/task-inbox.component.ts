@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
+import { MatTableDataSource } from '@angular/material/table';
+import { SelectionModel } from '@angular/cdk/collections';
 
 export interface Task {
   taskId: string;
@@ -50,8 +52,33 @@ export class TaskInboxComponent implements OnInit {
   ngOnInit(): void {
   }
 
-   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-    dataSource = ELEMENT_DATA;
-    clickedRows = new Set<PeriodicElement>();
+   displayedColumns: string[] = ['select', 'position', 'name', 'weight', 'symbol'];
+    dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+    selection = new SelectionModel<PeriodicElement>(true, []);
+
+    /** Whether the number of selected elements matches the total number of rows. */
+    isAllSelected() {
+      const numSelected = this.selection.selected.length;
+      const numRows = this.dataSource.data.length;
+      return numSelected === numRows;
+    }
+
+    /** Selects all rows if they are not all selected; otherwise clear selection. */
+    toggleAllRows() {
+      if (this.isAllSelected()) {
+        this.selection.clear();
+        return;
+      }
+
+      this.selection.select(...this.dataSource.data);
+    }
+
+    /** The label for the checkbox on the passed row */
+    checkboxLabel(row?: PeriodicElement): string {
+      if (!row) {
+        return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
+      }
+      return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
+    }
 
 }
