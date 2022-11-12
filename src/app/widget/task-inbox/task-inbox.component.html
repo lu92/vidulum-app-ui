@@ -48,10 +48,23 @@
     <td mat-cell *matCellDef="let element"> {{element.created.toISOString()}} </td>
   </ng-container>
 
-  <!-- Created Column -->
+  <!-- DueDate Column -->
   <ng-container matColumnDef="dueDate">
     <th mat-header-cell *matHeaderCellDef> DueDate </th>
     <td mat-cell *matCellDef="let element"> {{element.dueDate.toISOString()}} </td>
+  </ng-container>
+
+  <!-- Action Column -->
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+        <mat-icon>visibility</mat-icon>
+      </button>
+      <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
