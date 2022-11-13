@@ -15,17 +15,18 @@ export interface Task {
   userId: string;
   name: string;
   description: string;
+  isFavourite: boolean;
   status: string;
   priority: Priority;
   created: Date;
   dueDate: Date;
 }
   const TASKS: Task[] = [
-    {taskId : "T101", userId : "lu92", name: 'Task1', description: "Hello world", status : "Open", priority: Priority.Highest, created: new Date(2018, 0O5, 0O5, 17, 23, 42, 11), dueDate: new Date(2018, 0O5, 0O5, 17, 23, 42, 11)},
-    {taskId : "T101", userId : "lu92", name: 'Task1', description: "Hello world", status : "Open", priority: Priority.High, created: new Date(2018, 0O5, 0O5, 17, 23, 42, 11), dueDate: new Date(2018, 0O5, 0O5, 17, 23, 42, 11)},
-    {taskId : "T102", userId : "lu92", name: 'Task2', description: "Hello world", status : "Open", priority: Priority.Medium, created: new Date(2018, 0O5, 0O5, 17, 23, 42, 11), dueDate: new Date(2018, 0O5, 0O5, 17, 23, 42, 11)},
-    {taskId : "T103", userId : "lu92", name: 'Task3', description: "Hello world", status : "Open", priority: Priority.Low, created: new Date(2018, 0O5, 0O5, 17, 23, 42, 11), dueDate: new Date(2018, 0O5, 0O5, 17, 23, 42, 11)},
-    {taskId : "T103", userId : "lu92", name: 'Task3', description: "Hello world", status : "Open", priority: Priority.Lowest, created: new Date(2018, 0O5, 0O5, 17, 23, 42, 11), dueDate: new Date(2018, 0O5, 0O5, 17, 23, 42, 11)}
+    {taskId : "T101", userId : "lu92", name: 'Task1', description: "Hello world", isFavourite: true, status : "Open", priority: Priority.Highest, created: new Date(2018, 0O5, 0O5, 17, 23, 42, 11), dueDate: new Date(2018, 0O5, 0O5, 17, 23, 42, 11)},
+    {taskId : "T101", userId : "lu92", name: 'Task1', description: "Hello world", isFavourite: false, status : "Open", priority: Priority.High, created: new Date(2018, 0O5, 0O5, 17, 23, 42, 11), dueDate: new Date(2018, 0O5, 0O5, 17, 23, 42, 11)},
+    {taskId : "T102", userId : "lu92", name: 'Task2', description: "Hello world", isFavourite: false, status : "Open", priority: Priority.Medium, created: new Date(2018, 0O5, 0O5, 17, 23, 42, 11), dueDate: new Date(2018, 0O5, 0O5, 17, 23, 42, 11)},
+    {taskId : "T103", userId : "lu92", name: 'Task3', description: "Hello world", isFavourite: true, status : "Open", priority: Priority.Low, created: new Date(2018, 0O5, 0O5, 17, 23, 42, 11), dueDate: new Date(2018, 0O5, 0O5, 17, 23, 42, 11)},
+    {taskId : "T103", userId : "lu92", name: 'Task3', description: "Hello world", isFavourite: false, status : "Open", priority: Priority.Lowest, created: new Date(2018, 0O5, 0O5, 17, 23, 42, 11), dueDate: new Date(2018, 0O5, 0O5, 17, 23, 42, 11)}
   ];
 
 @Component({
@@ -40,7 +41,7 @@ export class TaskInboxComponent implements OnInit {
   ngOnInit(): void {
   }
 
-   displayedColumns: string[] = ['select', 'taskId', 'userId', 'name', 'status', 'priority', 'created', 'action'];
+   displayedColumns: string[] = ['select', 'star', 'taskId', 'userId', 'name', 'status', 'priority', 'created', 'action'];
     dataSource = new MatTableDataSource<Task>(TASKS);
     selection = new SelectionModel<Task>(true, []);
 

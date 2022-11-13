@@ -18,7 +18,17 @@
     </td>
   </ng-container>
 
-  <!-- Position Column -->
+  <!-- Star Column -->
+  <ng-container matColumnDef="star">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button [color]="element.isFavourite === true ? 'accent' : 'primary'" >
+        <mat-icon>star</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <!-- TaskId Column -->
   <ng-container matColumnDef="taskId">
     <th mat-header-cell *matHeaderCellDef> TaskId</th>
     <td mat-cell *matCellDef="let element"> {{element.taskId}}</td>
