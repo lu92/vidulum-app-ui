@@ -22,8 +22,9 @@
   <ng-container matColumnDef="star">
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let element">
-      <button mat-icon-button [color]="element.isFavourite === true ? 'accent' : 'primary'" >
-        <mat-icon>star</mat-icon>
+      <button mat-icon-button color="accent" [ngSwitch]="element.isFavourite">
+        <mat-icon *ngSwitchCase="true">star</mat-icon>
+        <mat-icon *ngSwitchCase="false">star_border</mat-icon>
       </button>
     </td>
   </ng-container>
