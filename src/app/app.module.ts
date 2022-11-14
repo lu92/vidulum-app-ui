@@ -16,6 +16,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { TaskInboxComponent } from './widget/task-inbox/task-inbox.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatIconModule,
     MatDividerModule,
     MatTableModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

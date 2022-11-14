@@ -43,7 +43,7 @@ export class TaskInboxComponent implements OnInit {
   ngOnInit(): void {
   }
 
-   displayedColumns: string[] = ['select','star', 'visibility', 'taskId', 'userId', 'name', 'status', 'portfolio', 'priority', 'created', 'action'];
+   displayedColumns: string[] = ['select','star', 'menu', 'visibility', 'taskId', 'userId', 'name', 'status', 'portfolio', 'priority', 'created'];
     dataSource = new MatTableDataSource<Task>(TASKS);
     selection = new SelectionModel<Task>(true, []);
 
