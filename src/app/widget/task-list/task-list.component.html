@@ -30,7 +30,7 @@
   <ng-container matColumnDef="star">
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let element">
-      <button mat-icon-button color="accent" [ngSwitch]="element.isFavourite">
+      <button mat-icon-button color="accent" [ngSwitch]="element.isFavourite" (click)="favouriteTaskClicked(element)">
         <mat-icon *ngSwitchCase="true">star</mat-icon>
         <mat-icon *ngSwitchCase="false">star_border</mat-icon>
       </button>

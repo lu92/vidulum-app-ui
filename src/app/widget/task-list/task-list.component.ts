@@ -59,4 +59,8 @@ export class TaskListComponent implements OnInit {
       return Priority[priority];
     }
 
+    favouriteTaskClicked(task: Task) {
+       console.log(task)
+    }
+
 }
