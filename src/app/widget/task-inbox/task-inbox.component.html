@@ -4,9 +4,7 @@
   <ng-container matColumnDef="rag">
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let element">
-      <div class="rag">
-      </div>
-      <span></span>
+      <rag-status [rag]="element.rag"></rag-status>
     </td>
   </ng-container>
 
