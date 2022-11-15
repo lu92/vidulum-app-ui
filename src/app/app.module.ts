@@ -17,13 +17,15 @@ import { TaskInboxComponent } from './widget/task-inbox/task-inbox.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatMenuModule} from '@angular/material/menu';
+import { RagStatusComponent } from './widget/rag-status/rag-status.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotationPageComponent,
     HomePageComponent,
-    TaskInboxComponent
+    TaskInboxComponent,
+    RagStatusComponent
   ],
   imports: [
     BrowserModule,

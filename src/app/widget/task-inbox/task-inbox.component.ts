@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
 import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
+import { RagStatus } from '../../model/RagStatus';
 
 enum Priority {
   Highest,
@@ -9,13 +10,6 @@ enum Priority {
   Medium,
   Low,
   Lowest
-}
-
-enum RagStatus {
-  RED,
-  AMBER,
-  GREEN,
-  NO_COLOR
 }
 
 export interface Task {
