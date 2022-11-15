@@ -13,7 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { QuotationPageComponent } from './pages/quotation-page/quotation-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { TaskInboxComponent } from './widget/task-inbox/task-inbox.component';
+import { TaskListComponent } from './widget/task-list/task-list.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatMenuModule} from '@angular/material/menu';
@@ -24,7 +24,7 @@ import { RagStatusComponent } from './widget/rag-status/rag-status.component';
     AppComponent,
     QuotationPageComponent,
     HomePageComponent,
-    TaskInboxComponent,
+    TaskListComponent,
     RagStatusComponent
   ],
   imports: [

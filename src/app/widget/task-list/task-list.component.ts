@@ -15,11 +15,11 @@ const TASKS: Task[] = [
 ];
 
 @Component({
-  selector: 'task-inbox',
-  templateUrl: './task-inbox.component.html',
-  styleUrls: ['./task-inbox.component.scss']
+  selector: 'task-list',
+  templateUrl: './task-list.component.html',
+  styleUrls: ['./task-list.component.scss']
 })
-export class TaskInboxComponent implements OnInit {
+export class TaskListComponent implements OnInit {
 
   constructor() { }
 
