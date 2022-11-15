@@ -18,6 +18,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatMenuModule} from '@angular/material/menu';
 import { RagStatusComponent } from './widget/rag-status/rag-status.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { RagStatusComponent } from './widget/rag-status/rag-status.component';
     MatDividerModule,
     MatTableModule,
     MatCheckboxModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
