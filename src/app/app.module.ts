@@ -19,6 +19,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatMenuModule} from '@angular/material/menu';
 import { RagStatusComponent } from './widget/rag-status/rag-status.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { InboxPageComponent } from './pages/inbox-page/inbox-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     QuotationPageComponent,
     HomePageComponent,
     TaskListComponent,
-    RagStatusComponent
+    RagStatusComponent,
+    InboxPageComponent
   ],
   imports: [
     BrowserModule,
