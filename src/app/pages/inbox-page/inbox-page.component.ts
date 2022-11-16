@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InboxService } from '../../services/inbox.service';
+import { Task } from '../../model/Task';
 
 @Component({
   selector: 'app-inbox-page',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InboxPageComponent implements OnInit {
 
-  constructor() { }
+  public pendingTasks: Task[] = [];
+  private inboxService: InboxService;
+
+  constructor(private inboxDataService: InboxService) {
+    this.inboxService = inboxDataService;
+  }
 
   ngOnInit(): void {
+    this.pendingTasks = this.inboxService.getPendingTasks();
   }
 
 }

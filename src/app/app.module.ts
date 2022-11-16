@@ -14,12 +14,13 @@ import { MatDividerModule } from '@angular/material/divider';
 import { QuotationPageComponent } from './pages/quotation-page/quotation-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { TaskListComponent } from './widget/task-list/task-list.component';
-import {MatTableModule} from '@angular/material/table';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatTableModule } from '@angular/material/table';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatMenuModule } from '@angular/material/menu';
 import { RagStatusComponent } from './widget/rag-status/rag-status.component';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { InboxPageComponent } from './pages/inbox-page/inbox-page.component';
+import { InboxService } from './services/inbox.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { InboxPageComponent } from './pages/inbox-page/inbox-page.component';
     MatMenuModule,
     MatTabsModule
   ],
-  providers: [],
+  providers: [InboxService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
