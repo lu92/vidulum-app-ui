@@ -1,6 +1,6 @@
 <mat-tab-group animationDuration="500ms">
   <mat-tab label="Pending">
-    <task-list></task-list>
+    <task-list [tasks]="pendingTasks"></task-list>
   </mat-tab>
   <mat-tab label="Completed">
     <task-list></task-list>

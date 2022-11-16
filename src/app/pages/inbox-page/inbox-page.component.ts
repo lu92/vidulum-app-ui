@@ -14,10 +14,11 @@ export class InboxPageComponent implements OnInit {
 
   constructor(private inboxDataService: InboxService) {
     this.inboxService = inboxDataService;
+    this.pendingTasks = this.inboxService.getPendingTasks();
+    console.log('Pending tasks loaded!', this.pendingTasks.length);
   }
 
   ngOnInit(): void {
-    this.pendingTasks = this.inboxService.getPendingTasks();
   }
 
 }
