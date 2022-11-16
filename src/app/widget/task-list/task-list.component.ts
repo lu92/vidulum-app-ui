@@ -17,7 +17,7 @@ export class TaskListComponent implements OnInit {
   tasks: Task[] = [];
 
   displayedColumns: string[] = [
-  'rag', 'select','star', 'menu', 'visibility', 'taskId', 'createdBy', 'priority', 'userId', 'name', 'status', 'portfolio', 'created'
+  'rag', 'select','star', 'menu', 'visibility', 'taskId', 'createdBy', 'priority', 'userId', 'name', 'status', 'portfolio'
   ];
   selection = new SelectionModel<Task>(true, []);
   dataSource!: MatTableDataSource<Task>;
