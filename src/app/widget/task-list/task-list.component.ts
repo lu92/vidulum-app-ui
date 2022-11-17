@@ -57,7 +57,14 @@ export class TaskListComponent implements OnInit {
     }
 
     favouriteTaskClicked(task: Task) {
-       console.log(task)
+      const index = this.tasks.findIndex( element => {
+        return element.taskId === task.taskId;
+      });
+
+      if (index !== -1 ) {
+        const isFavourite = this.tasks[index].isFavourite;
+        this.tasks[index].isFavourite = isFavourite ? false : true;
+      }
     }
 
 }
