@@ -66,5 +66,8 @@ export class TaskListComponent implements OnInit {
         this.tasks[index].isFavourite = isFavourite ? false : true;
       }
     }
+  checkboxSelected(task: Task) {
+    console.log(task)
+  }
 
 }
