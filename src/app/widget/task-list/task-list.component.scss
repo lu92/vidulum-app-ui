@@ -17,3 +17,7 @@ tr.inbox-element-row:not(.example-expanded-row):active {
 .make-highlighted-background {
     background: #c2dbff;
 }
+
+.mat-row:hover .mat-cell{
+    background-color: #fff5a2;
+}
